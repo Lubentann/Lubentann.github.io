@@ -64,6 +64,18 @@
   .btn.ghost{background:var(--surface2);color:var(--text);border:1px solid var(--border)}
   .btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
 
+  /* ── 平台徽章：讓「雙棲」一眼看得出來 ── */
+  .platforms{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+  .platforms span{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;
+    background:var(--accent-l);color:var(--accent);border-radius:99px;padding:5px 13px}
+  /* ── 雙欄展示：左電腦、右手機 ── */
+  .duo{display:grid;grid-template-columns:1.55fr 1fr;gap:14px;align-items:end;margin:0 0 18px}
+  .duo figure{margin:0}
+  .duo img{width:100%;border-radius:10px;border:1px solid var(--border);display:block}
+  .duo figcaption{font-size:12.5px;color:var(--text3);margin-top:8px;text-align:center}
+  @media(max-width:600px){ .duo{grid-template-columns:1fr;gap:16px}
+    .duo figure:last-child{max-width:62%;margin:0 auto} }
+
   /* ── Highlights ── */
   .points{list-style:none;padding:0;margin:0 0 18px;font-size:15px;color:var(--text2)}
   .points li{padding-left:22px;position:relative;margin-bottom:7px}
@@ -98,8 +110,6 @@
   <h2>作品</h2>
 
   <article class="card">
-    <img class="shot" src="assets/xiaotao-shot.png"
-         alt="小逃 Trip：Google Maps 旁的側邊欄，正在把整份已儲存清單匯入行程">
     <div class="body">
       <div class="head">
         <img src="assets/xiaotao-icon.png" alt="小逃 Trip 圖示">
@@ -109,6 +119,20 @@
         </div>
       </div>
       <p>在 Google Maps 旁邊收藏地點、排出每日行程，和旅伴即時共編。解決「一邊查地圖、一邊在另一個分頁排行程」的來回切換。</p>
+      <div class="platforms">
+        <span>🧩 Chrome 擴充功能</span>
+        <span>📱 手機網頁版（PWA）</span>
+      </div>
+      <div class="duo">
+        <figure>
+          <img src="assets/xiaotao-shot.png" alt="電腦：Google Maps 與擴充功能側邊欄並排，正在整份匯入已儲存清單">
+          <figcaption>電腦 · 擴充功能與 Maps 並排</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/xiaotao-phone.png" alt="手機：每日行程時間軸與站間交通時間">
+          <figcaption>手機 · 同一份行程即時同步</figcaption>
+        </figure>
+      </div>
       <ul class="points">
         <li>從 Maps 一鍵收藏，或整份匯入已儲存清單並自動判斷分類</li>
         <li>每日時間軸自動推算抵達時間與站間交通，偵測繞路時主動建議順路排序</li>
@@ -120,9 +144,10 @@
         <span>Firebase</span><span>原生 JS（無框架）</span><span>WCAG AA</span>
       </div>
       <div class="actions">
-        <a class="btn primary" href="https://lubentann.github.io/trip-planner-pwa/" target="_blank" rel="noopener noreferrer">開啟網頁版</a>
-        <a class="btn ghost" href="https://lubentann.github.io/trip-planner-pwa/demo/" target="_blank" rel="noopener noreferrer">試用與說明</a>
+        <a class="btn primary" href="https://lubentann.github.io/trip-planner-pwa/" target="_blank" rel="noopener noreferrer">開啟手機網頁版</a>
+        <a class="btn ghost" href="https://lubentann.github.io/trip-planner-pwa/demo/#extension" target="_blank" rel="noopener noreferrer">下載 Chrome 擴充功能</a>
       </div>
+      <p style="margin:12px 0 0;font-size:13px;color:var(--text3)">擴充功能已送審 Chrome 線上應用程式商店，上架前可用開發者模式安裝試用</p>
     </div>
   </article>
 
