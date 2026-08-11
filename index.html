@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Allen — 作品集</title>
+<meta name="description" content="用 AI 工具打造、真正上線的產品作品集。">
+<meta name="theme-color" content="#C2410C">
+<link rel="icon" type="image/png" href="assets/xiaotao-icon.png">
+<style>
+  :root{
+    --bg:#faf9f6;--surface:#fff;--surface2:#f2f0ea;--border:#e4e1d9;
+    --text:#1a1916;--text2:#5f5d55;--text3:#96938a;
+    --accent:#C2410C;--accent-l:#FCEDE4;
+    --shadow:0 1px 3px rgba(0,0,0,.05),0 8px 24px rgba(0,0,0,.05);
+  }
+  @media(prefers-color-scheme:dark){
+    :root{
+      --bg:#141316;--surface:#1e1d21;--surface2:#27262b;--border:#33323a;
+      --text:#f2f0e8;--text2:#a5a29a;--text3:#726f68;
+      --accent:#FF8A5B;--accent-l:#33190E;
+      --shadow:0 1px 3px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;
+    line-height:1.7;-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:880px;margin:0 auto;padding:72px 22px 90px}
+  a{color:var(--accent)}
+
+  /* ── Hero ── */
+  .hero h1{font-size:34px;margin:0 0 10px;letter-spacing:-.5px}
+  .hero p.lead{font-size:18px;color:var(--text2);margin:0 0 22px;max-width:620px}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;font-size:14px}
+  .meta a{display:inline-flex;align-items:center;gap:6px;text-decoration:none;
+    background:var(--surface);border:1px solid var(--border);border-radius:99px;
+    padding:7px 15px;color:var(--text2);transition:border-color .15s,color .15s}
+  .meta a:hover{border-color:var(--accent);color:var(--accent)}
+
+  h2{font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--text3);margin:64px 0 18px}
+
+  /* ── Project card ── */
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:16px;
+    overflow:hidden;box-shadow:var(--shadow);margin-bottom:26px}
+  .card .shot{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;
+    border-bottom:1px solid var(--border);background:var(--surface2)}
+  .card .body{padding:22px 24px 24px}
+  .card .head{display:flex;align-items:center;gap:13px;margin-bottom:10px}
+  .card .head img{width:44px;height:44px;border-radius:11px;flex-shrink:0}
+  .card h3{font-size:20px;margin:0;letter-spacing:-.2px}
+  .card .role{font-size:13px;color:var(--text3);margin:2px 0 0}
+  .card p{margin:0 0 14px;color:var(--text2);font-size:15.5px}
+  .tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
+  .tags span{font-size:12px;background:var(--surface2);color:var(--text2);
+    border-radius:6px;padding:4px 9px;white-space:nowrap}
+  .actions{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{display:inline-block;text-decoration:none;font-weight:600;font-size:14.5px;
+    padding:11px 20px;border-radius:9px;transition:filter .15s}
+  .btn.primary{background:var(--accent);color:#fff}
+  @media(prefers-color-scheme:dark){ .btn.primary{background:#C2410C} }
+  .btn.primary:hover{filter:brightness(1.1)}
+  .btn.ghost{background:var(--surface2);color:var(--text);border:1px solid var(--border)}
+  .btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+  /* ── Highlights ── */
+  .points{list-style:none;padding:0;margin:0 0 18px;font-size:15px;color:var(--text2)}
+  .points li{padding-left:22px;position:relative;margin-bottom:7px}
+  .points li::before{content:'';position:absolute;left:4px;top:11px;width:6px;height:6px;
+    border-radius:50%;background:var(--accent)}
+
+  /* ── Placeholder ── */
+  .soon{border:1.5px dashed var(--border);border-radius:16px;padding:30px 24px;
+    text-align:center;color:var(--text3);font-size:15px;background:transparent}
+
+  footer{margin-top:70px;padding-top:22px;border-top:1px solid var(--border);
+    color:var(--text3);font-size:13.5px}
+  @media(max-width:600px){
+    .wrap{padding:48px 18px 70px}
+    .hero h1{font-size:27px} .hero p.lead{font-size:16.5px}
+    .btn{flex:1;text-align:center}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <h1>Allen</h1>
+    <p class="lead">我用 AI 工具把想法做成真正能上線、有人在用的產品 —— 從需求、設計、實作到上架與維運，一個人走完整條路。</p>
+    <div class="meta">
+      <a href="https://github.com/Lubentann" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="mailto:hu.allen5000@gmail.com">Email</a>
+    </div>
+  </div>
+
+  <h2>作品</h2>
+
+  <article class="card">
+    <img class="shot" src="assets/xiaotao-shot.png"
+         alt="小逃 Trip：Google Maps 旁的側邊欄，正在把整份已儲存清單匯入行程">
+    <div class="body">
+      <div class="head">
+        <img src="assets/xiaotao-icon.png" alt="小逃 Trip 圖示">
+        <div>
+          <h3>小逃 Trip</h3>
+          <p class="role">Chrome 擴充功能 ＋ PWA · 獨立開發</p>
+        </div>
+      </div>
+      <p>在 Google Maps 旁邊收藏地點、排出每日行程，和旅伴即時共編。解決「一邊查地圖、一邊在另一個分頁排行程」的來回切換。</p>
+      <ul class="points">
+        <li>從 Maps 一鍵收藏，或整份匯入已儲存清單並自動判斷分類</li>
+        <li>每日時間軸自動推算抵達時間與站間交通，偵測繞路時主動建議順路排序</li>
+        <li>邀請碼多人即時共編，手機網頁版同步同一份行程</li>
+        <li>已送審 Chrome 線上應用程式商店</li>
+      </ul>
+      <div class="tags">
+        <span>Manifest V3</span><span>Side Panel API</span><span>PWA</span>
+        <span>Firebase</span><span>原生 JS（無框架）</span><span>WCAG AA</span>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="https://lubentann.github.io/trip-planner-pwa/" target="_blank" rel="noopener noreferrer">開啟網頁版</a>
+        <a class="btn ghost" href="https://lubentann.github.io/trip-planner-pwa/demo/" target="_blank" rel="noopener noreferrer">試用與說明</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- ── 要新增作品：複製上面整個 <article class="card"> 區塊，改內容即可 ──
+       圖片放進 assets/，沒有截圖時可先移除 <img class="shot"> 那一行。 -->
+
+  <div class="soon">其他作品陸續整理中</div>
+
+  <footer>
+    <p style="margin:0">© 2026 Allen · 以 GitHub Pages 架設</p>
+  </footer>
+
+</div>
+</body>
+</html>
