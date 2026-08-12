@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Allen — 作品集</title>
+<title>胡哲綸 — 作品集</title>
 <meta name="description" content="用 AI 工具打造、真正上線的產品作品集。">
 <meta name="theme-color" content="#C2410C">
 <link rel="icon" type="image/png" href="assets/xiaotao-icon.png">
@@ -76,6 +76,14 @@
   @media(max-width:600px){ .duo{grid-template-columns:1fr;gap:16px}
     .duo figure:last-child{max-width:62%;margin:0 auto} }
 
+  /* ── 數字牆 ── */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);
+    border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:0 0 18px}
+  .stats div{background:var(--surface);padding:15px 12px;text-align:center}
+  .stats b{display:block;font-size:21px;color:var(--accent);letter-spacing:-.3px;line-height:1.3}
+  .stats small{display:block;font-size:12px;color:var(--text3);margin-top:3px;line-height:1.4}
+  @media(max-width:600px){ .stats{grid-template-columns:repeat(2,1fr)} }
+
   /* ── Highlights ── */
   .points{list-style:none;padding:0;margin:0 0 18px;font-size:15px;color:var(--text2)}
   .points li{padding-left:22px;position:relative;margin-bottom:7px}
@@ -99,7 +107,7 @@
 <div class="wrap">
 
   <div class="hero">
-    <h1>Allen</h1>
+    <h1>胡哲綸</h1>
     <p class="lead">我用 AI 工具把想法做成真正能上線、有人在用的產品 —— 從需求、設計、實作到上架與維運，一個人走完整條路。</p>
     <div class="meta">
       <a href="https://github.com/Lubentann" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -107,7 +115,7 @@
     </div>
   </div>
 
-  <h2>作品</h2>
+  <h2>作品與專案</h2>
 
   <article class="card">
     <div class="body">
@@ -151,13 +159,46 @@
     </div>
   </article>
 
+  <article class="card">
+    <div class="body">
+      <div class="head">
+        <div>
+          <h3>日貨代購 0→1 專案</h3>
+          <p class="role">2026.07 · 30 天 · 一人獨立執行</p>
+        </div>
+      </div>
+      <p>人在東京的一個月，從零開一門生意：選品、獲客、成交、金流、出貨全部自己來。真正要解的問題不是把東西賣掉，而是讓陌生人願意先付錢給一個沒見過面的人。</p>
+      <div class="stats">
+        <div><b>19 萬</b><small>營業額</small></div>
+        <div><b>4 萬</b><small>淨利（21%）</small></div>
+        <div><b>60 筆</b><small>訂單 · 90 件商品</small></div>
+        <div><b>300 萬</b><small>Threads 曝光</small></div>
+        <div><b>575</b><small>追蹤者（從 0 開始）</small></div>
+        <div><b>120 人</b><small>LINE 社群（從 0 開始）</small></div>
+      </div>
+      <ul class="points">
+        <li><b>信賴設計 · 金流</b>：訂金從全額調整為 30%，在「不被棄單」與「陌生人敢下單」之間找平衡；以 LINE Pay Money 收訂金降低帳戶風險，並要求備註訂單編號，讓每一筆金流都可追溯</li>
+        <li><b>信賴設計 · 內容</b>：選品與新品發售抓精準客源、日本旅遊觀察養泛流量，兩類主題交叉發文，用累積起來的流量本身建立可信度</li>
+        <li><b>成效</b>：客單價 3,167 元；單次代購團就有 3 位以上客人在收到第一件商品後立刻回購</li>
+        <li><b>系統</b>：以 Google 表單＋Apps Script 建置自動進單與對帳並實測可用，但實際營運仍保留人工核對 —— 這門生意的瓶頸是信賴，不是效率</li>
+      </ul>
+      <div class="tags">
+        <span>Threads 冷啟動</span><span>私域社群經營</span><span>金流風險設計</span>
+        <span>Google Apps Script</span><span>選品與定價</span>
+      </div>
+      <div class="actions">
+        <a class="btn ghost" href="https://www.threads.com/@lubentannn" target="_blank" rel="noopener noreferrer">看 Threads 帳號</a>
+      </div>
+    </div>
+  </article>
+
   <!-- ── 要新增作品：複製上面整個 <article class="card"> 區塊，改內容即可 ──
        圖片放進 assets/，沒有截圖時可先移除 <img class="shot"> 那一行。 -->
 
   <div class="soon">其他作品陸續整理中</div>
 
   <footer>
-    <p style="margin:0">© 2026 Allen · 以 GitHub Pages 架設</p>
+    <p style="margin:0">© 2026 胡哲綸 · 以 GitHub Pages 架設</p>
   </footer>
 
 </div>
