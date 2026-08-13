@@ -75,6 +75,10 @@
   .duo figcaption{font-size:12.5px;color:var(--text3);margin-top:8px;text-align:center}
   @media(max-width:600px){ .duo{grid-template-columns:1fr;gap:16px}
     .duo figure:last-child{max-width:62%;margin:0 auto} }
+  /* 兩張比例相近的截圖：等寬並排 */
+  .duo.even{grid-template-columns:1fr 1fr;align-items:start}
+  @media(max-width:600px){ .duo.even{grid-template-columns:1fr}
+    .duo.even figure:last-child{max-width:100%} }
 
   /* ── 數字牆 ── */
   .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);
@@ -174,7 +178,17 @@
         <div><b>60 筆</b><small>訂單 · 90 件商品</small></div>
         <div><b>300 萬</b><small>Threads 曝光</small></div>
         <div><b>575</b><small>追蹤者（從 0 開始）</small></div>
-        <div><b>120 人</b><small>LINE 社群（從 0 開始）</small></div>
+        <div><b>121 人</b><small>LINE 社群（從 0 開始）</small></div>
+      </div>
+      <div class="duo even">
+        <figure>
+          <img src="assets/daigou-threads.jpg" alt="Threads 帳號個人頁，顯示累積 300 萬次瀏覽">
+          <figcaption>Threads 帳號 · 累積 300 萬次瀏覽</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/daigou-line.jpg" alt="自營 LINE 社群「路邊攤的東京購物團」，121 位成員">
+          <figcaption>自營 LINE 社群 · 121 位成員</figcaption>
+        </figure>
       </div>
       <ul class="points">
         <li><b>信賴設計 · 金流</b>：訂金從全額調整為 30%，在「不被棄單」與「陌生人敢下單」之間找平衡；以 LINE Pay Money 收訂金降低帳戶風險，並要求備註訂單編號，讓每一筆金流都可追溯</li>
