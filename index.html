@@ -75,10 +75,6 @@
   .duo figcaption{font-size:12.5px;color:var(--text3);margin-top:8px;text-align:center}
   @media(max-width:600px){ .duo{grid-template-columns:1fr;gap:16px}
     .duo figure:last-child{max-width:62%;margin:0 auto} }
-  /* 兩張比例相近的截圖：等寬並排 */
-  .duo.even{grid-template-columns:1fr 1fr;align-items:start}
-  @media(max-width:600px){ .duo.even{grid-template-columns:1fr}
-    .duo.even figure:last-child{max-width:100%} }
 
   /* ── 數字牆 ── */
   .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);
@@ -177,10 +173,10 @@
         <div><b>4 萬</b><small>淨利（21%）</small></div>
         <div><b>60 筆</b><small>訂單 · 90 件商品</small></div>
         <div><b>300 萬</b><small>Threads 曝光</small></div>
-        <div><b>575</b><small>追蹤者（從 0 開始）</small></div>
+        <div><b>580</b><small>追蹤者（從 0 開始）</small></div>
         <div><b>121 人</b><small>LINE 社群（從 0 開始）</small></div>
       </div>
-      <div class="duo even">
+      <div class="duo">
         <figure>
           <img src="assets/daigou-threads.jpg" alt="Threads 帳號個人頁，顯示累積 300 萬次瀏覽">
           <figcaption>Threads 帳號 · 累積 300 萬次瀏覽</figcaption>
